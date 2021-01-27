@@ -6,7 +6,7 @@ info:
   license:
     name: MIT
 servers:
-  - url: "http://localhost/api/v1"
+  - url: "https://aeration-japan.co.jp/api/v1"
 paths:
   /register:
     $ref: "./components/paths/member.yml#/SignUp"

@@ -1,0 +1,9 @@
+Parameter:
+  in: path
+  name: id
+  description: ユーザーID
+  required: true
+  schema:
+    type: integer
+    format: int64
+    example: 9

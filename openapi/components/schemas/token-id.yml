@@ -1,0 +1,7 @@
+Schema:
+  type: object
+  properties:
+    user_id:
+      type: integer
+      format: int64
+      example: 1

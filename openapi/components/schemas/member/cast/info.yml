@@ -1,0 +1,9 @@
+Schema:
+  type: object
+  properties:
+    cast_detail:
+      allOf:
+        - $ref: "../detail.yml#/Schema"
+        - $ref: "./extra.yml#/Schema"
+    photos:
+      $ref: "../photos.yml#/Schema"

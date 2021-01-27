@@ -1,0 +1,157 @@
+VerifyEmail:
+  get:
+    operationId: get-api-v1-guest-email-verify
+    description: ゲストのメール認証
+    summary: email verification
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+      - $ref: "../parameters/path/user-id.yml#/Parameter"
+      - $ref: "../parameters/query/signature.yml#/Parameter"
+      - $ref: "../parameters/query/expires.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Email Verified"
+        headers: {}
+RefreshToken:
+  post:
+    operationId: get-api-v1-guest-refresh
+    description: ゲストのトークンリフレッシュ
+    summary: refresh token
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/token.yml#/Schema"
+        headers: {}
+
+Login:
+  post:
+    operationId: get-api-v1-guest-login
+    description: ゲストのログイン
+    summary: sign in
+    tags:
+      - Guest
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+                example: test@hoge.com
+              password:
+                type: string
+                format: password
+                example: password
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/token.yml#/Schema"
+        headers: {}
+
+Logout:
+  post:
+    operationId: get-api-v1-guest-logout
+    description: ゲストのログアウト
+    summary: sign out
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              properties:
+                message:
+                  type: string
+                  example: Successfully logged out
+        headers: {}
+
+Me:
+  get:
+    operationId: get-api-v1-guest-me
+    description: ログインしているゲストの登録情報を取得
+    summary: Registration information
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "../schemas/member/basic.yml#/Schema"
+                - $ref: "../schemas/member/guest/info.yml#/Schema"
+        headers: {}
+
+SendResetMail:
+  post:
+    operationId: get-api-v1-guest-password-email
+    description: ゲストのパスワード再設定メール送信
+    summary: send reset mail
+    tags:
+      - Guest
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+                example: test@hoge.com
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Send Rest Mail"
+        headers: {}
+
+ResetPassword:
+  post:
+    operationId: get-api-v1-guest-password-reset
+    description: ゲストのパスワード再設定
+    summary: reset password
+    tags:
+      - Guest
+    requestBody:
+      $ref: "../requestBody/reset-password.yml#/Body"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Password Reset"
+        headers: {}

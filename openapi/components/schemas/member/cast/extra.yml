@@ -1,0 +1,21 @@
+Schema:
+  type: object
+  properties:
+    bank_name:
+      type: string
+      example: 金融機関名
+    branch_name:
+      type: string
+      example: 支店名
+    branch_code:
+      type: string
+      example: 支店番号
+    bank_account_type:
+      type: string
+      example: 口座種別
+    bank_accounts:
+      type: string
+      example: 口座番号
+    account_holder:
+      type: string
+      example: 口座名義人

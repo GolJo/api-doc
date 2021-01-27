@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  description: "GolJoアプリのAPI"
+  version: 1.0.0
+  title: Gol-Jo
+  license:
+    name: MIT
+servers:
+  - url: "http://localhost/api/v1"
+paths:
+  /register:
+    $ref: "./components/paths/member.yml#/SignUp"
+
+  # Cast
+  /cast/email/verify/{id}:
+    $ref: "./components/paths/cast.yml#/VerifyEmail"
+  /cast/refresh:
+    $ref: "./components/paths/cast.yml#/RefreshToken"
+  /cast/login:
+    $ref: "./components/paths/cast.yml#/Login"
+  /cast/logout:
+    $ref: "./components/paths/cast.yml#/Logout"
+  /cast/me:
+    $ref: "./components/paths/cast.yml#/Me"
+  /cast/password/email:
+    $ref: "./components/paths/cast.yml#/SendResetMail"
+  /cast/password/reset:
+    $ref: "./components/paths/cast.yml#/ResetPassword"
+
+  # Guest
+  /guest/email/verify/{id}:
+    $ref: "./components/paths/guest.yml#/VerifyEmail"
+  /guest/refresh:
+    $ref: "./components/paths/guest.yml#/RefreshToken"
+  /guest/login:
+    $ref: "./components/paths/guest.yml#/Login"
+  /guest/logout:
+    $ref: "./components/paths/guest.yml#/Logout"
+  /guest/me:
+    $ref: "./components/paths/guest.yml#/Me"
+  /guest/password/email:
+    $ref: "./components/paths/guest.yml#/SendResetMail"
+  /guest/password/reset:
+    $ref: "./components/paths/guest.yml#/ResetPassword"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Credentials or access token for API

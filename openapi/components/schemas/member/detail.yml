@@ -1,0 +1,93 @@
+Schema:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+      example: 1
+    cast_id:
+      type: integer
+      format: int64
+      example: 1
+    score_id:
+      type: integer
+      format: int64
+      example: アベレージスコアID
+    experience_id:
+      type: integer
+      format: int64
+      example: ゴルフ暦ID
+    educational_background_id:
+      type: integer
+      format: int64
+      example: 学歴ID
+    figure_id:
+      type: integer
+      format: int64
+      example: 体型ID
+    blood_type_id:
+      type: integer
+      format: int64
+      example: 血液型ID
+    personality_id:
+      type: integer
+      format: int64
+      example: 性格タイプID
+    annual_income_id:
+      type: integer
+      format: int64
+      example: 年収ID
+    occupation_id:
+      type: integer
+      format: int64
+      example: 職業ID
+    height:
+      type: number
+      example: 身長
+    drinking:
+      type: integer
+      format: int32
+      example: 飲酒 0:しない 1:する
+    smoking:
+      type: integer
+      format: int32
+      example: 喫煙 0:しない 1:する
+    housemate:
+      type: integer
+      format: int32
+      example: 同居人の人数
+    profile:
+      type: string
+      example: 自己紹介です
+    foot_print:
+      type: integer
+      format: int32
+      example: 足跡機能 0:無 1:有り
+    like:
+      type: integer
+      format: int32
+      example: いいね機能 0:無 1:有り
+    delay_alert:
+      type: integer
+      format: int32
+      example: 遅延通知機能 0:無 1:有
+    foot_print_notice:
+      type: integer
+      format: int32
+      example: 足跡通知 0:無 1:有
+    like_notice:
+      type: integer
+      format: int32
+      example: いいね通知 0:無 1:有
+    message_notice:
+      type: integer
+      format: int32
+      example: メッセージ通知 0:無 1:有
+    admin_notice:
+      type: integer
+      format: int32
+      example: 運営からの通知 0:無 1:有
+    start_finish_notice:
+      type: integer
+      format: int32
+      example: 合流・解散通知 0:無 1:有

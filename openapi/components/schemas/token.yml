@@ -1,0 +1,10 @@
+Schema:
+  type: object
+  properties:
+    access_token:
+      type: string
+      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FwaVwvdjFcL3JlZ2lzdGVyIiwiaWF0IjoxNjExNTUxNzQ0LCJleHAiOjE2MTE1NTUzNDQsIm5iZiI6MTYxMTU1MTc0NCwianRpIjoiVjRnTVhQR2l0N1lmV3VLeSIsInN1YiI6NTIsInBydiI6IjM3Yjg2M2Q5NWVmOGQwYmMzOTAzMTEwYWNkM2UwZTVhNmFmZWI2NTIifQ.SxuHPnRgiWOwL__Cl60fW-gIljznAgJm15D0s0gmjeU
+    expires_in:
+      type: integer
+      format: int32
+      example: 3600

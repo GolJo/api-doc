@@ -1,0 +1,57 @@
+Schema:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+      example: 1
+    email:
+      type: string
+      format: email
+      example: test@hoge.com11
+    number:
+      type: string
+      format: uuid
+      example: 776eaf04-d18a-393a-a449-9cc58b54b5df
+    user_name:
+      type: string
+      example: test-user
+    last_name:
+      type: string
+      example: テスト
+    first_name:
+      type: string
+      example: です
+    birthday:
+      type: string
+      format: date
+      example: "1995-01-01"
+    gender:
+      type: integer
+      format: int32
+      example: 1:男 2:女
+    zipcode1:
+      type: string
+      example: "100"
+    zipcode2:
+      type: string
+      example: "0000"
+    prefecture:
+      type: integer
+      format: int32
+      example: 都道府県のID
+    city:
+      type: string
+      example: 市区町村番地
+    room:
+      type: string
+      example: 建物名・号室
+    phone1:
+      type: string
+      example: "090"
+    phone2:
+      type: string
+      example: "1234"
+    phone3:
+      type: string
+      example: "5678"

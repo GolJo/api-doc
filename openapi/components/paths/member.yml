@@ -1,0 +1,49 @@
+SignUp:
+  post:
+    operationId: post-api-v1-register
+    description: キャストとゲストの新規登録
+    summary: sign up
+    tags:
+      - Register
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+                example: test@hoge.com
+              password:
+                type: string
+                format: password
+                example: password
+              password_confirmation:
+                type: string
+                format: password
+                example: password
+              last_name:
+                type: string
+                example: テスト
+              first_name:
+                type: string
+                example: です
+              gender:
+                type: integer
+                format: int32
+                example: 1:男 2:女
+              member_type:
+                type: integer
+                format: int32
+                example: 1:ゲスト 2:キャスト
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "../schemas/token.yml#/Schema"
+                - $ref: "../schemas/token-id.yml#/Schema"
+        headers: {}

@@ -1,0 +1,157 @@
+VerifyEmail:
+  get:
+    operationId: get-api-v1-cast-email-verify
+    description: キャストのメール認証
+    summary: email verification
+    tags:
+      - Cast
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+      - $ref: "../parameters/path/user-id.yml#/Parameter"
+      - $ref: "../parameters/query/signature.yml#/Parameter"
+      - $ref: "../parameters/query/expires.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Email Verified"
+        headers: {}
+RefreshToken:
+  post:
+    operationId: get-api-v1-cast-refresh
+    description: キャストのトークンリフレッシュ
+    summary: refresh token
+    tags:
+      - Cast
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/token.yml#/Schema"
+        headers: {}
+
+Login:
+  post:
+    operationId: get-api-v1-cast-login
+    description: キャストのログイン
+    summary: sign in
+    tags:
+      - Cast
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+                example: test@hoge.com
+              password:
+                type: string
+                format: password
+                example: password
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/token.yml#/Schema"
+        headers: {}
+
+Logout:
+  post:
+    operationId: get-api-v1-cast-logout
+    description: キャストのログアウト
+    summary: sign out
+    tags:
+      - Cast
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              properties:
+                message:
+                  type: string
+                  example: Successfully logged out
+        headers: {}
+
+Me:
+  get:
+    operationId: get-api-v1-cast-me
+    description: ログインしているキャストの登録情報を取得
+    summary: Registration information
+    tags:
+      - Cast
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "../schemas/member/basic.yml#/Schema"
+                - $ref: "../schemas/member/cast/info.yml#/Schema"
+        headers: {}
+
+SendResetMail:
+  post:
+    operationId: get-api-v1-cast-password-email
+    description: キャストのパスワード再設定メール送信
+    summary: send reset mail
+    tags:
+      - Cast
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+                example: test@hoge.com
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Send Rest Mail"
+        headers: {}
+
+ResetPassword:
+  post:
+    operationId: get-api-v1-cast-password-reset
+    description: キャストのパスワード再設定
+    summary: reset password
+    tags:
+      - Cast
+    requestBody:
+      $ref: "../requestBody/reset-password.yml#/Body"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Password Reset"
+        headers: {}

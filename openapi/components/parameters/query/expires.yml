@@ -1,0 +1,8 @@
+Parameter:
+  in: query
+  name: expires
+  description: "ハッシュの有効期限"
+  required: true
+  schema:
+    type: integer
+    example: 1611574362

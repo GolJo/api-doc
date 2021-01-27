@@ -1,0 +1,20 @@
+Schema:
+  type: object
+  properties:
+    card_number:
+      type: string
+      example: カード番号
+    card_expiration_month:
+      type: integer
+      format: int32
+      example: 有効期限:月
+    card_expiration_year:
+      type: integer
+      format: int32
+      example: 有効期限:年
+    digit_code:
+      type: string
+      example: セキュリティコード
+    print_name:
+      type: string
+      example: カードに記載されている名前

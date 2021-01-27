@@ -1,0 +1,8 @@
+Parameter:
+  in: query
+  name: signature
+  description: "ハッシュコード"
+  required: true
+  schema:
+    type: string
+    example: 81a2f02bb910e5d01b18a721eb992b698f4c2dac31caacb007b7a06257e3fccf

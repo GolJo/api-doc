@@ -6,43 +6,46 @@ info:
   license:
     name: MIT
 servers:
-  - url: "https://aeration-japan.co.jp/api/v1"
+  - url: "https://admin.aeration-japan.co.jp/api/v1"
 paths:
   /register:
     $ref: "./components/paths/member.yml#/SignUp"
 
   # Cast
-  /cast/email/verify/{id}:
+  /casts/email/verify/{id}:
     $ref: "./components/paths/cast.yml#/VerifyEmail"
-  /cast/refresh:
+  /casts/refresh:
     $ref: "./components/paths/cast.yml#/RefreshToken"
-  /cast/login:
+  /casts/login:
     $ref: "./components/paths/cast.yml#/Login"
-  /cast/logout:
+  /casts/logout:
     $ref: "./components/paths/cast.yml#/Logout"
-  /cast/me:
+  /casts/me:
     $ref: "./components/paths/cast.yml#/Me"
-  /cast/password/email:
+  /casts/password/email:
     $ref: "./components/paths/cast.yml#/SendResetMail"
-  /cast/password/reset:
+  /casts/password/reset:
     $ref: "./components/paths/cast.yml#/ResetPassword"
 
   # Guest
-  /guest/email/verify/{id}:
+  /guests/email/verify/{id}:
     $ref: "./components/paths/guest.yml#/VerifyEmail"
-  /guest/refresh:
+  /guests/refresh:
     $ref: "./components/paths/guest.yml#/RefreshToken"
-  /guest/login:
+  /guests/login:
     $ref: "./components/paths/guest.yml#/Login"
-  /guest/logout:
+  /guests/logout:
     $ref: "./components/paths/guest.yml#/Logout"
-  /guest/me:
+  /guests/me:
     $ref: "./components/paths/guest.yml#/Me"
-  /guest/password/email:
+  /guests/password/email:
     $ref: "./components/paths/guest.yml#/SendResetMail"
-  /guest/password/reset:
+  /guests/password/reset:
     $ref: "./components/paths/guest.yml#/ResetPassword"
 
+  # Masster
+  /masters:
+    $ref: "./components/paths/master.yml#/All"
 components:
   securitySchemes:
     bearerAuth:

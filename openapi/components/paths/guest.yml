@@ -155,3 +155,41 @@ ResetPassword:
           application/json:
             example: "Password Reset"
         headers: {}
+
+RegisterCreditCard:
+  post:
+    operationId: get-api-v1-guest-card
+    description: ゲストのクレジットカード登録
+    summary: register credit card
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    requestBody:
+      $ref: "../requestBody/register-credit-card.yml#/Body"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Successfully storeed card information"
+        headers: {}
+
+PurchasePoint:
+  post:
+    operationId: get-api-v1-purchase-point
+    description: ポイントの購入
+    summary: purchase of point
+    tags:
+      - Guest
+    security:
+      - $ref: "#componets/securitySchemes/bearerAuth"
+    requestBody:
+      $ref: "../requestBody/payment-point.yml#/Body"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            example: "Successfully"
+        headers: {}

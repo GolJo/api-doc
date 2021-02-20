@@ -1,0 +1,22 @@
+Body:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          token:
+            type: string
+            example: 1cc7dbeca2f441391803af257f36c00c6fd415595803aaf2bf6689c2a4d8b9b9
+          brand:
+            type: string
+            example: Visa
+          last4:
+            type: string
+            example: '4242'
+          exp_month:
+            type: int32
+            example: 1
+          exp_year:
+            type: int32
+            example: 2020

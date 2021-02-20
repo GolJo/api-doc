@@ -36,12 +36,16 @@ paths:
     $ref: "./components/paths/guest.yml#/Login"
   /guests/logout:
     $ref: "./components/paths/guest.yml#/Logout"
-  /guests/me:
+  /guests:
     $ref: "./components/paths/guest.yml#/Me"
   /guests/password/email:
     $ref: "./components/paths/guest.yml#/SendResetMail"
   /guests/password/reset:
     $ref: "./components/paths/guest.yml#/ResetPassword"
+  /guests/credit:
+    $ref: "./components/paths/guest.yml#/RegisterCreditCard"
+  /guests/points:
+    $ref: "./components/paths/guest.yml#/PurchasePoint"
 
   # Masster
   /masters:

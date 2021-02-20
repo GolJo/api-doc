@@ -1,9 +1,12 @@
 Schema:
   type: object
   properties:
-    card_number:
+    card_brand:
       type: string
-      example: カード番号
+      example: カードのブランド
+    card_last4:
+      type: string
+      example: カード番号の下４桁
     card_expiration_month:
       type: integer
       format: int32
@@ -12,9 +15,3 @@ Schema:
       type: integer
       format: int32
       example: 有効期限:年
-    digit_code:
-      type: string
-      example: セキュリティコード
-    print_name:
-      type: string
-      example: カードに記載されている名前

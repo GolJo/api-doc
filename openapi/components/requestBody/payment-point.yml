@@ -1,0 +1,10 @@
+Body:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          token:
+            type: int32
+            example: ポイントマスタのID

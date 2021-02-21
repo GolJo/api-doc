@@ -1,0 +1,53 @@
+Schema:
+  type: object
+  properties:
+    score_id:
+      type: integer
+      format: int64
+      example: アベレージスコアID
+    experience_id:
+      type: integer
+      format: int64
+      example: ゴルフ暦ID
+    educational_background_id:
+      type: integer
+      format: int64
+      example: 学歴ID
+    figure_id:
+      type: integer
+      format: int64
+      example: 体型ID
+    blood_type_id:
+      type: integer
+      format: int64
+      example: 血液型ID
+    personality_id:
+      type: integer
+      format: int64
+      example: 性格タイプID
+    annual_income_id:
+      type: integer
+      format: int64
+      example: 年収ID
+    occupation_id:
+      type: integer
+      format: int64
+      example: 職業ID
+    height:
+      type: number
+      example: 身長
+    drinking:
+      type: integer
+      format: int32
+      example: 飲酒 0:しない 1:する
+    smoking:
+      type: integer
+      format: int32
+      example: 喫煙 0:しない 1:する
+    housemate:
+      type: integer
+      format: int32
+      example: 同居人の人数
+    profile:
+      type: string
+      example: 自己紹介です

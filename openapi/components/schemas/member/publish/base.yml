@@ -1,0 +1,24 @@
+Schema:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+      example: 1
+    user_name:
+      type: string
+      example: ユーザーネーム
+    last_name:
+      type: string
+      example: 名前（氏）
+    first_name:
+      type: string
+      example: 名前（名）
+    birthday:
+      type: string
+      format: date
+      example: 誕生日
+    prefecture:
+      type: integer
+      format: int32
+      example: 都道府県のID

@@ -1,0 +1,27 @@
+Body:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          cast_detail:
+            type: object
+            properties:
+              bank_name:
+                type: string
+                example: 金融機関名
+              branch_name:
+                type: string
+                example: 支店名
+              branch_code:
+                type: number
+                example: 支店コード
+              bank_account_type:
+                type: integer
+                example: 口座種別（1:普通 2:当座）
+              bank_accounts:
+                type: integer
+                example: 口座番号
+              account_holder:
+                type: string
+                example: 口座名義

@@ -6,5 +6,5 @@ Body:
         type: object
         properties:
           token:
-            type: int32
+            type: integer
             example: ポイントマスタのID

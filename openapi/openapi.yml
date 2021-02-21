@@ -20,8 +20,14 @@ paths:
     $ref: "./components/paths/cast.yml#/Login"
   /casts/logout:
     $ref: "./components/paths/cast.yml#/Logout"
+  /casts:
+    $ref: "./components/paths/cast.yml#/All"
   /casts/me:
     $ref: "./components/paths/cast.yml#/Me"
+  /casts:
+    $ref: "./components/paths/cast.yml#/UpdateProfile"
+  /casts/photos:
+    $ref: "./components/paths/cast.yml#/Photo"
   /casts/password/email:
     $ref: "./components/paths/cast.yml#/SendResetMail"
   /casts/password/reset:
@@ -37,7 +43,13 @@ paths:
   /guests/logout:
     $ref: "./components/paths/guest.yml#/Logout"
   /guests:
+    $ref: "./components/paths/guest.yml#/All"
+  /guests/me:
     $ref: "./components/paths/guest.yml#/Me"
+  /guests:
+    $ref: "./components/paths/guest.yml#/UpdateProfile"
+  /guests/photos:
+    $ref: "./components/paths/guest.yml#/Photo"
   /guests/password/email:
     $ref: "./components/paths/guest.yml#/SendResetMail"
   /guests/password/reset:

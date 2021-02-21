@@ -24,7 +24,7 @@ paths:
     $ref: "./components/paths/cast.yml#/All"
   /casts/me:
     $ref: "./components/paths/cast.yml#/Me"
-  /casts/:
+  /casts{id}:
     $ref: "./components/paths/cast.yml#/UpdateProfile"
   /casts/photos:
     $ref: "./components/paths/cast.yml#/Photo"
@@ -46,7 +46,7 @@ paths:
     $ref: "./components/paths/guest.yml#/All"
   /guests/me:
     $ref: "./components/paths/guest.yml#/Me"
-  /guests/:
+  /guests/{id}:
     $ref: "./components/paths/guest.yml#/UpdateProfile"
   /guests/photos:
     $ref: "./components/paths/guest.yml#/Photo"

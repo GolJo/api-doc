@@ -28,8 +28,8 @@ RefreshToken:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    requestBody:
-      $ref: "../requestBody/profile.yml#/Body"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -140,6 +140,9 @@ UpdateProfile:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+      - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
       allOf:
         - $ref: "../requestBody/profile.yml#/Body"
@@ -160,6 +163,8 @@ Photo:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       content:
         application/json:

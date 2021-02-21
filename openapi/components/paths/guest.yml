@@ -141,6 +141,9 @@ UpdateProfile:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
+      - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
       allOf:
         - $ref: "../requestBody/profile.yml#/Body"
@@ -160,6 +163,8 @@ Photo:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       content:
         application/json:
@@ -234,6 +239,8 @@ RegisterCreditCard:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       $ref: "../requestBody/register-credit-card.yml#/Body"
     responses:
@@ -252,6 +259,8 @@ PurchasePoint:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
+    parameters:
+      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       $ref: "../requestBody/payment-point.yml#/Body"
     responses:

@@ -28,8 +28,6 @@ RefreshToken:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    requestBody:
-      $ref: "../requestBody/profile.yml#/Body"
     responses:
       "200":
         description: OK
@@ -141,7 +139,9 @@ UpdateProfile:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     requestBody:
-      - $ref: "../requestBody/profile.yml#/Body"
+      allOf:
+        - $ref: "../requestBody/profile.yml#/Body"
+        - $ref: "../requestBody/bank-info.yml#/Body"
     responses:
       "200":
         description: OK

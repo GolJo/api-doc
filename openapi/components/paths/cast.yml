@@ -141,9 +141,7 @@ UpdateProfile:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     requestBody:
-      allOf:
-        - $ref: "../requestBody/profile.yml#/Body"
-        - $ref: "../requestBody/bank-info.yml#/Body"
+      - $ref: "../requestBody/profile.yml#/Body"
     responses:
       "200":
         description: OK

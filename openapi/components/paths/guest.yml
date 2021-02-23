@@ -156,7 +156,7 @@ UpdateProfile:
 
 Photo:
   post:
-    operationId: get-api-v1-guest-update-profile
+    operationId: get-api-v1-guest-upload-photo
     description: 本人写真のアップロード
     summary: upload photo
     tags:

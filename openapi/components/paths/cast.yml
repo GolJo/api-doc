@@ -6,7 +6,7 @@ VerifyEmail:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     parameters:
       - $ref: "../parameters/path/user-id.yml#/Parameter"
       - $ref: "../parameters/query/signature.yml#/Parameter"
@@ -26,7 +26,7 @@ RefreshToken:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     responses:
       "200":
         description: OK
@@ -72,7 +72,7 @@ Logout:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     responses:
       "200":
         description: OK
@@ -92,7 +92,7 @@ All:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     responses:
       "200":
         description: OK
@@ -111,7 +111,7 @@ Me:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     responses:
       "200":
         description: OK
@@ -130,7 +130,7 @@ UpdateProfile:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     parameters:
       - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
@@ -152,7 +152,7 @@ Photo:
     tags:
       - Cast
     security:
-      - $ref: "#componets/securitySchemes/bearerAuth"
+      - $ref: "#components/securitySchemes/bearerAuth"
     requestBody:
       content:
         application/json:

@@ -8,7 +8,6 @@ VerifyEmail:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/user-id.yml#/Parameter"
       - $ref: "../parameters/query/signature.yml#/Parameter"
       - $ref: "../parameters/query/expires.yml#/Parameter"
@@ -28,8 +27,6 @@ RefreshToken:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -76,8 +73,6 @@ Logout:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -98,8 +93,6 @@ All:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -119,8 +112,6 @@ Me:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -141,7 +132,6 @@ UpdateProfile:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
       allOf:
@@ -163,8 +153,6 @@ Photo:
       - Cast
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       content:
         application/json:

@@ -8,7 +8,6 @@ VerifyEmail:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/user-id.yml#/Parameter"
       - $ref: "../parameters/query/signature.yml#/Parameter"
       - $ref: "../parameters/query/expires.yml#/Parameter"
@@ -28,8 +27,6 @@ RefreshToken:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -76,8 +73,6 @@ Logout:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -99,8 +94,6 @@ All:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -120,8 +113,6 @@ Me:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "200":
         description: OK
@@ -142,7 +133,6 @@ UpdateProfile:
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
       allOf:
@@ -163,8 +153,6 @@ Photo:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       content:
         application/json:
@@ -239,8 +227,6 @@ RegisterCreditCard:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       $ref: "../requestBody/register-credit-card.yml#/Body"
     responses:
@@ -259,8 +245,6 @@ PurchasePoint:
       - Guest
     security:
       - $ref: "#componets/securitySchemes/bearerAuth"
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     requestBody:
       $ref: "../requestBody/payment-point.yml#/Body"
     responses:

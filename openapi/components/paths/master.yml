@@ -1,10 +1,28 @@
 All:
   get:
     operationId: get-api-v1-master
-    description: マスターデータ（スコア、ゴルフ暦、学歴、体型、血液型、性格タイプ、年収、職業、都道府県、会員種別、性別、口座種別）
+    description: 全マスタ一括取得
     summary: all masters
     tags:
       - Master
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/master.yml#/Schema"
+        headers: {}
+
+Index:
+  get:
+    operationId: get-api-v1-specific-master
+    description: マスターデータ
+    summary: specific master list 
+    tags:
+      - Master
+    parameters:
+      - $ref: "../parameters/path/master-table.yml#/Parameter"
     responses:
       "200":
         description: OK

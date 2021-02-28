@@ -1,0 +1,8 @@
+Parameter:
+  in: path
+  name: table
+  description: マスタ名称（ポイント、スコア、ゴルフ暦、学歴、体型、血液型、性格タイプ、年収、職業、都道府県、会員種別、性別、口座種別）
+  required: true
+  schema:
+    type: string
+    example: 'points, scores, experiences, educationalBackgrounds, figures, bloodTypes, personalities, annualIncomes, occupations, prefectures, memberTypes, genders, bankAccountTypes'

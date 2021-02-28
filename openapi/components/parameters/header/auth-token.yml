@@ -1,8 +1,0 @@
-Parameter:
-  name: auth_token
-  in: header
-  description: 認証トークン
-  required: true
-  schema:
-    type: string
-    example: bearer token

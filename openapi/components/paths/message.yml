@@ -4,8 +4,6 @@ Message:
     tags:
       - message
     operationId: message-list
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "400":
         $ref: "../errors/bad-request.yml#/Error"
@@ -27,8 +25,6 @@ MessageSearch:
     tags:
       - message
     operationId: message-search
-    parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
     responses:
       "400":
         $ref: "../errors/bad-request.yml#/Error"
@@ -52,7 +48,6 @@ MessageResource:
       - message
     operationId: message-detail
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/message-id.yml#/Parameter"
     responses:
       "400":
@@ -75,7 +70,6 @@ MessageResource:
       - message
     operationId: message-post
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/message-id.yml#/Parameter"
     responses:
       "400":
@@ -98,7 +92,6 @@ MessageResource:
       - message
     operationId: message-put
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/message-id.yml#/Parameter"
     responses:
       "400":
@@ -121,7 +114,6 @@ MessageResource:
       - message
     operationId: message-delete
     parameters:
-      - $ref: "../parameters/header/auth-token.yml#/Parameter"
       - $ref: "../parameters/path/message-id.yml#/Parameter"
     responses:
       "400":

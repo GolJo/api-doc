@@ -6,7 +6,7 @@ VerifyEmail:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     parameters:
       - $ref: "../parameters/path/user-id.yml#/Parameter"
       - $ref: "../parameters/query/signature.yml#/Parameter"
@@ -26,7 +26,7 @@ RefreshToken:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     responses:
       "200":
         description: OK
@@ -72,7 +72,7 @@ Logout:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     responses:
       "200":
         description: OK
@@ -93,7 +93,7 @@ All:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     responses:
       "200":
         description: OK
@@ -112,7 +112,7 @@ Me:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     responses:
       "200":
         description: OK
@@ -131,7 +131,7 @@ UpdateProfile:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     parameters:
       - $ref: "../parameters/path/user-id.yml#/Parameter"
     requestBody:
@@ -152,7 +152,7 @@ Photo:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     requestBody:
       content:
         application/json:
@@ -226,7 +226,7 @@ RegisterCreditCard:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     requestBody:
       $ref: "../requestBody/register-credit-card.yml#/Body"
     responses:
@@ -244,7 +244,7 @@ PurchasePoint:
     tags:
       - Guest
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - bearerAuth: []
     requestBody:
       $ref: "../requestBody/payment-point.yml#/Body"
     responses:

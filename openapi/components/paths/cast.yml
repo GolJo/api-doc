@@ -6,7 +6,7 @@ VerifyEmail:
     tags:
       - Cast
     security:
-      - $ref: "#components/securitySchemes/bearerAuth"
+      - $ref: "#/components/securitySchemes/bearerAuth"
     parameters:
       - $ref: "../parameters/path/user-id.yml#/Parameter"
       - $ref: "../parameters/query/signature.yml#/Parameter"

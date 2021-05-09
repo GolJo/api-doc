@@ -234,7 +234,12 @@ RegisterCreditCard:
         description: OK
         content:
           application/json:
-            example: "Successfully storeed card information"
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: success
 
 PurchasePoint:
   post:

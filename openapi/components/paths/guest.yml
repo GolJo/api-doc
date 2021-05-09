@@ -82,7 +82,7 @@ Logout:
               properties:
                 message:
                   type: string
-                  example: Successfully logged out
+                  example: success
 
 
 All:
@@ -142,7 +142,12 @@ UpdateProfile:
         description: OK
         content:
           application/json:
-            example: "Successfully"
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: success
 
 Photo:
   post:
@@ -257,4 +262,9 @@ PurchasePoint:
         description: OK
         content:
           application/json:
-            example: "Successfully"
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: success
